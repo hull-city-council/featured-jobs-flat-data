@@ -24,7 +24,6 @@ jobs:
         uses: githubocto/flat@mr/node16
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
-
         with:
-          http_url: https://api.apify.com/v2/acts/gainful_flare~my-actor/runs/last/dataset/items?token=$APIFY_TOKEN # The data to fetch
+          http_url: https://api.apify.com/v2/acts/gainful_flare~my-actor/runs/last/dataset/items?token=$env:APIFY_TOKEN # The data to fetch
           downloaded_filename: featured-jobs.json # The http_url gets saved and renamed in our repository
